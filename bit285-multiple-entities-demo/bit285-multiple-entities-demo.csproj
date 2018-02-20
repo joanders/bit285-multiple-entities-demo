@@ -114,6 +114,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Scripts\jquery-1.10.2-vsdoc.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -124,6 +125,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\_references.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -137,9 +139,21 @@
     <Compile Include="Migrations\201802192159270_intial.Designer.cs">
       <DependentUpon>201802192159270_intial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201802192330219_purchase.cs" />
-    <Compile Include="Migrations\201802192330219_purchase.Designer.cs">
-      <DependentUpon>201802192330219_purchase.cs</DependentUpon>
+    <Compile Include="Migrations\201802202315536_author.cs" />
+    <Compile Include="Migrations\201802202315536_author.Designer.cs">
+      <DependentUpon>201802202315536_author.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202316284_book.cs" />
+    <Compile Include="Migrations\201802202316284_book.Designer.cs">
+      <DependentUpon>201802202316284_book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202317065_member.cs" />
+    <Compile Include="Migrations\201802202317065_member.Designer.cs">
+      <DependentUpon>201802202317065_member.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802202317281_purchase.cs" />
+    <Compile Include="Migrations\201802202317281_purchase.Designer.cs">
+      <DependentUpon>201802202317281_purchase.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
@@ -159,7 +173,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Home\Purchase.cshtml" />
     <Content Include="Views\Home\Purchases.cshtml" />
     <None Include="Web.Debug.config">
@@ -176,8 +189,17 @@
     <EmbeddedResource Include="Migrations\201802192159270_intial.resx">
       <DependentUpon>201802192159270_intial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802192330219_purchase.resx">
-      <DependentUpon>201802192330219_purchase.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201802202315536_author.resx">
+      <DependentUpon>201802202315536_author.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202316284_book.resx">
+      <DependentUpon>201802202316284_book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202317065_member.resx">
+      <DependentUpon>201802202317065_member.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802202317281_purchase.resx">
+      <DependentUpon>201802202317281_purchase.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

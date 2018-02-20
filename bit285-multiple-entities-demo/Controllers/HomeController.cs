@@ -41,15 +41,53 @@ namespace IndyBooks.Controllers
         [HttpPost]
         public ActionResult AddBook(Book book)
         {
+            if (ModelState.IsValid)
+            {
+                db.Books.Add(book);
+                db.SaveChanges();
+                return View("Books", db.Books);
+            }
             return View();
         }
         /*
           * Author Creation and List
           * TODO: Develop methods and Views to create and list Authors 
           */
+        public ActionResult AddAuthor()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddAuthor(Author author)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Authors.Add(author);
+                db.SaveChanges();
+                return View("Authors", db.Authors);
+            }
+            return View();
+        }
         /*
           * Member Creation and List
           * TODO: Develop methods and Views to create and list Members 
           */
+        public ActionResult AddMember()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMember(Member member)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Members.Add(member);
+                db.SaveChanges();
+                return View("Member", db.Members);
+            }
+            return View();
+        }
     }
 }

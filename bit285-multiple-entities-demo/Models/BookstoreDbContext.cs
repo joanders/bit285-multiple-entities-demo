@@ -20,6 +20,9 @@ namespace IndyBooks.Models
      // Entity representing purchases
         public DbSet<Purchase> Purchases { get; set; }
 
+        // Entity representing authors
+        public DbSet<Author> Authors { get; set; }
+
 
 
     }
