@@ -40,8 +40,9 @@ namespace IndyBooks.Controllers
         public ActionResult AddBook()
         {
             //TODO: Create a new ViewModel object, assign values to its collections, and pass it to the View
-
-            return View();
+            var bvm = new BookViewModel();
+            bvm.Authors = db.Authors;      // assigns values to viewmodel collections
+            return View(bvm);
         }
 
         [HttpPost]
@@ -57,5 +58,9 @@ namespace IndyBooks.Controllers
             return View();
         }
 
+        //Modify the Home Controller to include methods for creating and 
+        //listing a new Book that includes a Dropdown list for possible 
+        //authors instead of an AuthorID. The resulting Book Listing View 
+        //should show the Author's full name for each Book
     }
 }

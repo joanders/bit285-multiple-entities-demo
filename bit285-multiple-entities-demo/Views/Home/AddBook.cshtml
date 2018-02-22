@@ -1,4 +1,5 @@
-﻿@model IndyBooks.Models.Book
+﻿@model IndyBooks.ViewModels.BookViewModel
+
 @{
     //TODO: Modify the AddBook View to use a new AddBookViewModel
     ViewBag.Title = "Lambda Expression Demo";
@@ -7,30 +8,32 @@
 @using (Html.BeginForm())
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Title)
-        @Html.EditorFor(m => m.Title)
-        @Html.ValidationMessageFor(m => m.Title, "*")
+        @Html.LabelFor(m => m.Book.Title)
+        @Html.EditorFor(m => m.Book.Title)
+        @Html.ValidationMessageFor(m => m.Book.Title, "*")
     </div>
     <div class="form-group">
         <!-- TODO: Update the AddBook View to include a Dropdown List for Authors -->
-        @Html.LabelFor(m => m.AuthorID)
-        @Html.EditorFor(m => m.AuthorID)
-        @Html.ValidationMessageFor(m => m.AuthorID, "*")
+            <!-- model.book.AuthorID-->
+        @Html.LabelFor(m => m.Book.AuthorID)
+        @Html.EditorFor(m => m.Book.AuthorID)
+        @Html.ValidationMessageFor(m => m.Book.AuthorID, "*")
+        @Html.DropDownListFor(model => model.Book.AuthorID, new SelectList(Model.Book.AuthorID))
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Edition)
-        @Html.EditorFor(m => m.Edition)
-        @Html.ValidationMessageFor(m => m.Edition, "")
+        @Html.LabelFor(m => m.Book.Edition)
+        @Html.EditorFor(m => m.Book.Edition)
+        @Html.ValidationMessageFor(m => m.Book.Edition, "")
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Publication)
-        @Html.EditorFor(m => m.Publication)
-        @Html.ValidationMessageFor(m => m.Publication, "")
+        @Html.LabelFor(m => m.Book.Publication)
+        @Html.EditorFor(m => m.Book.Publication)
+        @Html.ValidationMessageFor(m => m.Book.Publication, "")
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.Price)
-        @Html.EditorFor(m => m.Price)
-        @Html.ValidationMessageFor(m => m.Price, "*")
+        @Html.LabelFor(m => m.Book.Price)
+        @Html.EditorFor(m => m.Book.Price)
+        @Html.ValidationMessageFor(m => m.Book.Price, "*")
     </div>
 
     <div class="col-md-offset-2 col-md-10">
